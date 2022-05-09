@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id "org.jetbrains.kotlin.jvm" version "1.6.21"
+}
+
+group 'shadow.system'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.6.7'
+
+}
