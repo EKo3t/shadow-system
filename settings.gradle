@@ -1,3 +1,4 @@
 rootProject.name = 'shadow-system'
-include 'dictionary'
+
+includeBuild 'dictionary'
 
