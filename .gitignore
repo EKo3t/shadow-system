@@ -7,3 +7,4 @@ gradlew.bat
 
 ### IntelliJ IDEA ###
 .idea
+/dictionary/src/main/resources/mongodb.properties
