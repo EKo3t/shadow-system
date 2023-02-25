@@ -1,4 +1,4 @@
-package shadow.dictionary.persistence.model;
+package shadow.dictionary.model.persistence;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,16 +9,16 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import shadow.dictionary.model.Language;
 
-@Document
-@NoArgsConstructor
+@Document("words")
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Word {
 
     @Id
     private String id;
-    @Indexed(name = "word_value_unique_index", unique = true)
+    @Indexed(unique = true)
     private String value;
-    private Language language;
+    private Language lan;
 }

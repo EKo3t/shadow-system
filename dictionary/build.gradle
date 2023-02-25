@@ -3,26 +3,34 @@ plugins {
 }
 
 group 'shadow.system'
-version '1.0-SNAPSHOT'
+version '0.0.1'
 
 repositories {
     mavenCentral()
 }
 
 ext {
-    springBootVersion = "3.0.0"
-    lombokVersion = "1.18.24"
+    springVersion = '6.0.5'
+    lombokVersion = '1.18.26'
 }
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}"
-    implementation "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
+    implementation 'org.springframework.boot:spring-boot:3.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat:3.0.2'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-json:3.0.2'
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive:3.0.1'
+    implementation "org.springframework:spring-web:$springVersion"
+    implementation "org.springframework:spring-webmvc:$springVersion"
 
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
-    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+
+    implementation 'org.springframework.data:spring-data-mongodb:4.0.2'
+    implementation 'org.mongodb:mongodb-driver-sync:4.9.0'
 }
